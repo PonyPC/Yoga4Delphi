@@ -13,6 +13,12 @@ type
     YogaLayout2: TYogaLayout;
     YogaLayout3: TYogaLayout;
     Rectangle1: TRectangle;
+    YogaLayout4: TYogaLayout;
+    Rectangle2: TRectangle;
+    YogaLayout5: TYogaLayout;
+    Rectangle3: TRectangle;
+    YogaLayout6: TYogaLayout;
+    Rectangle4: TRectangle;
   private
     { Private declarations }
   public

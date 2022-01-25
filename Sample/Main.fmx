@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 0
   Caption = 'Form1'
   ClientHeight = 480
-  ClientWidth = 652
+  ClientWidth = 660
   Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -11,7 +11,7 @@ object MainForm: TMainForm
   DesignerMasterStyle = 0
   object YogaLayout1: TYogaLayout
     Align = Client
-    Size.Width = 652.000000000000000000
+    Size.Width = 660.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
@@ -19,45 +19,47 @@ object MainForm: TMainForm
     NodeHeight = '%'
     NodeFlexBasis = '%'
     NodeFlexShrink = 1.000000000000000000
-    NodeDirection = LTR
+    NodeDirection = Inherit
     NodeFlexWrap = No
     NodePositionType = Relative
     NodeJustifyContent = FlexStart
-    NodeAlignItems = Auto
-    NodeAlignContent = Auto
+    NodeAlignItems = Center
+    NodeAlignContent = FlexStart
     NodeFlexDirection = Row
     NodeAlignSelf = Auto
     object YogaLayout3: TYogaLayout
-      Size.Width = 100.000000000000000000
-      Size.Height = 100.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 150.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 0
-      NodeWidth = '100'
-      NodeHeight = '100'
+      TabOrder = 3
+      NodeWidth = '150'
+      NodeHeight = '150'
       NodeFlexBasis = '%'
       NodeFlexShrink = 1.000000000000000000
-      NodeDirection = Inherit
+      NodeDirection = LTR
       NodeFlexWrap = No
       NodePositionType = Relative
       NodeJustifyContent = FlexStart
       NodeAlignItems = Stretch
       NodeAlignContent = Stretch
-      NodeFlexDirection = Row
+      NodeFlexDirection = Column
       NodeAlignSelf = Auto
       object Rectangle1: TRectangle
         Align = Client
         Locked = True
-        Size.Width = 100.000000000000000000
-        Size.Height = 100.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 150.000000000000000000
         Size.PlatformDefault = False
       end
     end
     object YogaLayout2: TYogaLayout
-      Position.X = 100.000000000000000000
+      Position.X = 150.000000000000000000
+      Position.Y = 50.000000000000000000
       Size.Width = 100.000000000000000000
       Size.Height = 100.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 1
+      TabOrder = 4
       NodeWidth = '100'
       NodeHeight = '100'
       NodeFlexBasis = '%'
@@ -71,6 +73,86 @@ object MainForm: TMainForm
       NodeFlexDirection = Row
       NodeAlignSelf = Auto
       object Rect: TRectangle
+        Align = Client
+        Locked = True
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object YogaLayout4: TYogaLayout
+      Position.X = 250.000000000000000000
+      Position.Y = 50.000000000000000000
+      Size.Width = 0.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      NodeWidth = '50%'
+      NodeHeight = '100'
+      NodeFlexBasis = '%'
+      NodeFlexShrink = 1.000000000000000000
+      NodeDirection = LTR
+      NodeFlexWrap = No
+      NodePositionType = Relative
+      NodeJustifyContent = FlexStart
+      NodeAlignItems = Stretch
+      NodeAlignContent = Stretch
+      NodeFlexDirection = Column
+      NodeAlignSelf = Auto
+      object Rectangle2: TRectangle
+        Align = Client
+        Locked = True
+        Size.Width = 50.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object YogaLayout5: TYogaLayout
+      Position.X = 250.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      NodeWidth = '200'
+      NodeHeight = '200'
+      NodeFlexBasis = '%'
+      NodeFlexShrink = 1.000000000000000000
+      NodeDirection = Inherit
+      NodeFlexWrap = No
+      NodePositionType = Relative
+      NodeJustifyContent = FlexStart
+      NodeAlignItems = Stretch
+      NodeAlignContent = Stretch
+      NodeFlexDirection = ColumnReverse
+      NodeAlignSelf = Auto
+      object Rectangle3: TRectangle
+        Align = Client
+        Locked = True
+        Size.Width = 200.000000000000000000
+        Size.Height = 200.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object YogaLayout6: TYogaLayout
+      Position.X = 450.000000000000000000
+      Position.Y = 50.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      NodeWidth = '100'
+      NodeHeight = '100'
+      NodeFlexBasis = '%'
+      NodeFlexShrink = 1.000000000000000000
+      NodeDirection = LTR
+      NodeFlexWrap = No
+      NodePositionType = Relative
+      NodeJustifyContent = FlexStart
+      NodeAlignItems = Stretch
+      NodeAlignContent = Stretch
+      NodeFlexDirection = Column
+      NodeAlignSelf = Auto
+      object Rectangle4: TRectangle
         Align = Client
         Locked = True
         Size.Width = 100.000000000000000000

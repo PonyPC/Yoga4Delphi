@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Classes, System.Types, System.UITypes,
-  FMX.Types, FMX.Controls, FMX.Graphics,
+  FMX.Types, FMX.Controls, FMX.Graphics, FMX.Dialogs,
   Neslib.Yoga;
 
 type
@@ -75,6 +75,7 @@ type
     procedure SetNodeWidth(const Value: String);
   protected
     procedure Paint; override;
+    procedure Resize; override;
     procedure DoRealign; override;
     procedure DoAddObject(const AObject: TFmxObject); override;
     procedure DoRemoveObject(const AObject: TFmxObject); override;
@@ -191,7 +192,7 @@ begin
   CanParentFocus := True;
   HitTest := False;
   FNode := TYogaNode.Create;
-  FNode.BindLayout := TControl(Self);
+  FNode.BindLayout := TControl(self);
 end;
 
 destructor TYogaLayout.Destroy;
@@ -204,17 +205,21 @@ end;
 
 procedure TYogaLayout.DoAddObject(const AObject: TFmxObject);
 begin
-  inherited;
   if AObject is TYogaLayout then
+  begin
+    TYogaLayout(AObject).Align := TAlignLayout.None;
     FNode.Add(TYogaLayout(AObject).Node);
+  end;
+  inherited;
   Realign;
 end;
 
 procedure TYogaLayout.DoRealign;
 begin
+  inherited;
   if FNode.Parent = nil then
   begin
-    FNode.CalculateLayout;
+    FNode.CalculateLayout(Width, Height);
     for var I := 0 to Controls.Count - 1 do
     begin
       var
@@ -223,18 +228,10 @@ begin
         TYogaLayout(C).ApplyLayout;
     end;
   end;
-  inherited;
 end;
 
 procedure TYogaLayout.DoRemoveObject(const AObject: TFmxObject);
 begin
-  if AObject is TYogaLayout then
-  begin
-    var
-    Index := FNode.IndexOf(TYogaLayout(AObject).Node);
-    if (Index >= 0) then
-      FNode.Delete(Index, False);
-  end;
   inherited;
   Realign;
 end;
@@ -396,6 +393,12 @@ begin
     DrawDesignBorder;
 end;
 
+procedure TYogaLayout.Resize;
+begin
+  Realign;
+  inherited;
+end;
+
 procedure TYogaLayout.SetNodeAlignContent(const Value: TYogaAlign);
 begin
   FNode.AlignContent := Value;
@@ -454,9 +457,6 @@ end;
 procedure TYogaLayout.SetNodeHeight(const Value: String);
 begin
   FNode.Height := SetYogaValue(Value);
-  if Align = TAlignLayout.None then
-    if FNode.Height.Units = TYogaUnit.Point then
-      Height := FNode.Height.Value;
 end;
 
 procedure TYogaLayout.SetNodeJustifyContent(const Value: TYogaJustify);
@@ -547,9 +547,6 @@ end;
 procedure TYogaLayout.SetNodeWidth(const Value: String);
 begin
   FNode.Width := SetYogaValue(Value);
-  if Align = TAlignLayout.None then
-    if FNode.Width.Units = TYogaUnit.Point then
-      Width := FNode.Width.Value;
 end;
 
 function GetValueStr(Value: Single): String;

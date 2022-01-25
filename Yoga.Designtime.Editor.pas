@@ -128,19 +128,9 @@ begin
     Prop := TEdit(Sender).StyleName;
     Text := TEdit(Sender).Text.Trim;
     if Prop = 'Width' then
-    begin
-      FNode.Width := SetYogaValue(Text);
-      if YogaLayout.Align = TAlignLayout.None then
-        if FNode.Width.Units = TYogaUnit.Point then
-          YogaLayout.Width := FNode.Width.Value;
-    end
+      FNode.Width := SetYogaValue(Text)
     else if Prop = 'Height' then
-    begin
-      FNode.Height := SetYogaValue(Text);
-      if YogaLayout.Align = TAlignLayout.None then
-        if FNode.Height.Units = TYogaUnit.Point then
-          YogaLayout.Height := FNode.Height.Value;
-    end
+      FNode.Height := SetYogaValue(Text)
     else if Prop = 'MaxWidth' then
       FNode.MaxWidth := SetYogaValue(Text)
     else if Prop = 'MaxHeight' then
@@ -218,31 +208,17 @@ begin
     end;
   end;
 
+  var
+  BindLayout := TYogaLayout(YogaLayout);
   if isYogaParent then
+    BindLayout := TYogaLayout(BindLayout.Parent);
+  BindLayout.Node.CalculateLayout(BindLayout.Width, BindLayout.Height);
+  for var I := 0 to BindLayout.Controls.Count - 1 do
   begin
     var
-    ParentLayout := TYogaLayout(YogaLayout.Parent);
-    ParentLayout.Node.CalculateLayout;
-    for var I := 0 to ParentLayout.Controls.Count - 1 do
-    begin
-      var
-      C := ParentLayout.Controls[I];
-      if C is TYogaLayout then
-        TYogaLayout(C).ApplyLayout;
-    end;
-  end
-  else
-  begin
-    var
-    BindLayout := TYogaLayout(YogaLayout);
-    BindLayout.Node.CalculateLayout;
-    for var I := 0 to BindLayout.Controls.Count - 1 do
-    begin
-      var
-      C := BindLayout.Controls[I];
-      if C is TYogaLayout then
-        TYogaLayout(C).ApplyLayout;
-    end;
+    C := BindLayout.Controls[I];
+    if C is TYogaLayout then
+      TYogaLayout(C).ApplyLayout;
   end;
 end;
 

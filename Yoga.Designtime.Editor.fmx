@@ -3,8 +3,8 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
   Top = 0
   BorderStyle = ToolWindow
   Caption = 'Yoga Layout'
-  ClientHeight = 620
-  ClientWidth = 256
+  ClientHeight = 460
+  ClientWidth = 264
   Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -13,26 +13,28 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
   OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object LayoutProperties: TLayout
-    Align = Left
-    Size.Width = 256.000000000000000000
-    Size.Height = 620.000000000000000000
+    Align = Client
+    Size.Width = 264.000000000000000000
+    Size.Height = 460.000000000000000000
     Size.PlatformDefault = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
     object TabControl: TTabControl
       Align = Client
-      Size.Width = 256.000000000000000000
-      Size.Height = 620.000000000000000000
+      Size.Width = 264.000000000000000000
+      Size.Height = 460.000000000000000000
       Size.PlatformDefault = False
       TabIndex = 0
       TabOrder = 0
       TabPosition = PlatformDefault
       Sizes = (
-        256s
-        594s
-        256s
-        594s
-        256s
-        594s)
+        264s
+        434s
+        264s
+        434s
+        264s
+        434s)
       object TabItemLayout: TTabItem
         CustomIcon = <
           item
@@ -50,21 +52,23 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
         ExplicitSize.cy = 26.000000000000000000
         object VertScrollBoxLayout: TVertScrollBox
           Align = Client
-          Size.Width = 256.000000000000000000
-          Size.Height = 594.000000000000000000
+          Size.Width = 264.000000000000000000
+          Size.Height = 434.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 256.000000000000000000
-          Viewport.Height = 594.000000000000000000
+          Viewport.Width = 248.000000000000000000
+          Viewport.Height = 434.000000000000000000
           object GridPanelLayoutLayout: TGridPanelLayout
             Align = Top
             Margins.Left = 4.000000000000000000
             Margins.Right = 4.000000000000000000
             Position.X = 4.000000000000000000
-            Size.Width = 248.000000000000000000
+            Size.Width = 240.000000000000000000
             Size.Height = 264.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 50.000000000000000000
@@ -164,41 +168,53 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelWidthHeight: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Dimensions of the node'
+              Size.Width = 240.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'WIDTH '#215' HEIGHT'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 0
             end
             object LabelMaxWidthHeight: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Maximum dimensions of the node'
+              Size.Width = 240.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'MAX-WIDTH '#215' MAX-HEIGHT'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 3
             end
             object LabelMinWidthHeight: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Minimum dimensions of the node'
+              Size.Width = 240.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'MIN-WIDTH '#215' MIN-HEIGHT'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 6
             end
             object LabelAspectRatio: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Width/Height aspect ratio of node'
+              Size.Width = 240.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'ASPECT RATIO'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 9
             end
             object EditWidth: TEdit
@@ -210,7 +226,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Top = 4.000000000000000000
               Margins.Right = 2.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 122.000000000000000000
+              Size.Width = 118.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '% - auto, '#39#39' - none'
@@ -225,7 +241,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Left = 2.000000000000000000
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 122.000000000000000000
+              Size.Width = 118.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '% - auto, '#39#39' - none'
@@ -240,7 +256,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Left = 2.000000000000000000
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 122.000000000000000000
+              Size.Width = 118.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = 'none'
@@ -255,7 +271,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Top = 4.000000000000000000
               Margins.Right = 2.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 122.000000000000000000
+              Size.Width = 118.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = 'none'
@@ -270,7 +286,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Top = 4.000000000000000000
               Margins.Right = 2.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 122.000000000000000000
+              Size.Width = 118.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -285,7 +301,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Left = 2.000000000000000000
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 122.000000000000000000
+              Size.Width = 118.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -299,7 +315,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               FilterChar = '0123456789.'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 248.000000000000000000
+              Size.Width = 240.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = #39#39' - auto'
@@ -313,10 +329,12 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             Margins.Right = 30.000000000000000000
             Position.X = 30.000000000000000000
             Position.Y = 272.000000000000000000
-            Size.Width = 196.000000000000000000
+            Size.Width = 188.000000000000000000
             Size.Height = 75.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 33.333333333333350000
@@ -369,7 +387,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 0
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -378,7 +396,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelPadding: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -392,7 +410,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 3
               FilterChar = '0123456789.%'
-              Size.Width = 65.333328247070310000
+              Size.Width = 62.666664123535160000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -404,7 +422,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 4
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -416,7 +434,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 1
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -430,10 +448,12 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             Margins.Right = 30.000000000000000000
             Position.X = 30.000000000000000000
             Position.Y = 355.000000000000000000
-            Size.Width = 196.000000000000000000
+            Size.Width = 188.000000000000000000
             Size.Height = 75.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 33.333333333333350000
@@ -486,7 +506,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 0
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -495,7 +515,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelMargin: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -509,7 +529,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 3
               FilterChar = '0123456789.%'
-              Size.Width = 65.333328247070310000
+              Size.Width = 62.666664123535160000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -521,7 +541,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 4
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -533,7 +553,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 1
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -547,10 +567,12 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             Margins.Right = 4.000000000000000000
             Position.X = 4.000000000000000000
             Position.Y = 438.000000000000000000
-            Size.Width = 248.000000000000000000
+            Size.Width = 240.000000000000000000
             Size.Height = 66.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 50.000000000000000000
@@ -588,11 +610,17 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelPositionType: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 
+                'Relative position offsets the node from it'#39's calculated position' +
+                '. Absolute position removes the node from the flexbox flow and p' +
+                'ositions it at the given position.'
+              Size.Width = 240.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'POSITION TYPE'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 0
             end
             object SpeedButtonRelative: TSpeedButton
@@ -602,7 +630,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'PositionType'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 124.000000000000000000
+              Size.Width = 120.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonleft'
@@ -617,7 +645,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'PositionType'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 124.000000000000000000
+              Size.Width = 120.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonright'
@@ -632,10 +660,12 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             Margins.Right = 30.000000000000000000
             Position.X = 30.000000000000000000
             Position.Y = 512.000000000000000000
-            Size.Width = 196.000000000000000000
+            Size.Width = 188.000000000000000000
             Size.Height = 75.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 33.333333333333350000
@@ -688,7 +718,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 0
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               OnChangeTracking = ControlChange
@@ -696,7 +726,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelPosition: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -710,7 +740,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 3
               FilterChar = '0123456789.%'
-              Size.Width = 65.333328247070310000
+              Size.Width = 62.666664123535160000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               OnChangeTracking = ControlChange
@@ -721,7 +751,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 4
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               OnChangeTracking = ControlChange
@@ -732,7 +762,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Align = Client
               TabOrder = 1
               FilterChar = '0123456789.%'
-              Size.Width = 65.333335876464840000
+              Size.Width = 62.666667938232420000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               OnChangeTracking = ControlChange
@@ -757,21 +787,23 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
         ExplicitSize.cy = 26.000000000000000000
         object VertScrollBoxAlignment: TVertScrollBox
           Align = Client
-          Size.Width = 256.000000000000000000
-          Size.Height = 594.000000000000000000
+          Size.Width = 264.000000000000000000
+          Size.Height = 434.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 256.000000000000000000
-          Viewport.Height = 594.000000000000000000
+          Viewport.Width = 264.000000000000000000
+          Viewport.Height = 434.000000000000000000
           object GridPanelLayoutAlignment: TGridPanelLayout
             Align = Top
             Margins.Left = 4.000000000000000000
             Margins.Right = 4.000000000000000000
             Position.X = 4.000000000000000000
-            Size.Width = 248.000000000000000000
+            Size.Width = 256.000000000000000000
             Size.Height = 264.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 100.000000000000000000
@@ -848,21 +880,27 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelJustifyContent: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Aligns child nodes along the main-axis'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'JUSTIFY CONTENT'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 0
             end
             object LabelAlignItems: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Aligns child nodes along the cross-axis'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'ALIGN ITEMS'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 2
             end
             object ComboBoxAlignItems: TComboBox
@@ -879,7 +917,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
                 'SpaceAround')
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 248.000000000000000000
+              Size.Width = 256.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 3
@@ -888,21 +926,27 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelAlignSelf: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Override align items of parent'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'ALIGN SELF'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 4
             end
             object LabelAlignContent: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Alignment of lines along the cross-axis when wrapping'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'ALIGN CONTENT'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 6
             end
             object ComboBoxJustifyContent: TComboBox
@@ -917,7 +961,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
                 'SpaceEvenly')
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 248.000000000000000000
+              Size.Width = 256.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 1
@@ -937,7 +981,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
                 'SpaceAround')
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 248.000000000000000000
+              Size.Width = 256.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 5
@@ -957,7 +1001,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
                 'SpaceAround')
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 248.000000000000000000
+              Size.Width = 256.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 7
@@ -983,21 +1027,23 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
         ExplicitSize.cy = 26.000000000000000000
         object VertScrollBoxFlex: TVertScrollBox
           Align = Client
-          Size.Width = 256.000000000000000000
-          Size.Height = 594.000000000000000000
+          Size.Width = 264.000000000000000000
+          Size.Height = 434.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 256.000000000000000000
-          Viewport.Height = 594.000000000000000000
+          Viewport.Width = 264.000000000000000000
+          Viewport.Height = 434.000000000000000000
           object GridPanelLayoutFlex: TGridPanelLayout
             Align = Top
             Margins.Left = 4.000000000000000000
             Margins.Right = 4.000000000000000000
             Position.X = 4.000000000000000000
-            Size.Width = 248.000000000000000000
+            Size.Width = 256.000000000000000000
             Size.Height = 264.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
+            ParentShowHint = False
+            ShowHint = True
             ColumnCollection = <
               item
                 Value = 33.333333333333350000
@@ -1124,11 +1170,14 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelDirection: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Defines the direction of which text and items are laid out'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'DIRECTION'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 0
             end
             object SpeedButtonInherit: TSpeedButton
@@ -1138,7 +1187,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'Direction'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 82.666664123535160000
+              Size.Width = 85.333335876464840000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonleft'
@@ -1153,7 +1202,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'Direction'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 82.666664123535160000
+              Size.Width = 85.333335876464840000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonmiddle'
@@ -1168,7 +1217,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'Direction'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 82.666671752929690000
+              Size.Width = 85.333328247070310000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonright'
@@ -1178,11 +1227,14 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelFlexDirection: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Defines the direction of the main-axis'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'FLEX DIRECTION'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 1
             end
             object ComboBoxFlexDirection: TComboBox
@@ -1195,7 +1247,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
                 'RowReverse')
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 248.000000000000000000
+              Size.Width = 256.000000000000000000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 2
@@ -1204,31 +1256,40 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelBasis: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 82.666664123535160000
+              Hint = 'Default size of a node along the main axis'
+              Size.Width = 85.333335876464840000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'BASIS'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 3
             end
             object LabelGrow: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 82.666664123535160000
+              Hint = 'The factor of remaining space should be given to this node'
+              Size.Width = 85.333335876464840000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'GROW'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 4
             end
             object LabelShrink: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 82.666671752929690000
+              Hint = 'The shrink factor of this element if parent has no space left'
+              Size.Width = 85.333328247070310000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'SHRINK'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 5
             end
             object EditBasis: TEdit
@@ -1240,7 +1301,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Top = 4.000000000000000000
               Margins.Right = 2.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 80.666664123535160000
+              Size.Width = 83.333335876464840000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '% - auto'
@@ -1256,7 +1317,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Top = 4.000000000000000000
               Margins.Right = 2.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 78.666664123535160000
+              Size.Width = 81.333335876464840000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '0'
@@ -1271,7 +1332,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               Margins.Left = 2.000000000000000000
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 80.666671752929690000
+              Size.Width = 83.333328247070310000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               TextPrompt = '1'
@@ -1280,11 +1341,14 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
             object LabelFlexWrap: TLabel
               Align = Client
               StyledSettings = [Family, Size, FontColor]
-              Size.Width = 248.000000000000000000
+              Hint = 'Wrapping behaviour when child nodes don'#39't fit into a single line'
+              Size.Width = 256.000000000000000000
               Size.Height = 33.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.StyleExt = {00070000000000000004000000}
               Text = 'FLEX WRAP'
+              ParentShowHint = False
+              ShowHint = True
               TabOrder = 9
             end
             object SpeedButtonNoWrap: TSpeedButton
@@ -1294,7 +1358,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'FlexWrap'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 82.666664123535160000
+              Size.Width = 85.333335876464840000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonleft'
@@ -1309,7 +1373,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'FlexWrap'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 82.666664123535160000
+              Size.Width = 85.333335876464840000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonmiddle'
@@ -1324,7 +1388,7 @@ object YogaLayoutEditorForm: TYogaLayoutEditorForm
               GroupName = 'FlexWrap'
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Size.Width = 82.666671752929690000
+              Size.Width = 85.333328247070310000
               Size.Height = 25.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'segmentedbuttonright'
