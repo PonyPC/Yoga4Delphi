@@ -12,3 +12,4 @@ TLayout -> TYogaLayout(Aligned Client) -> TYogaLayout(Aligned None) -> Your Cont
                                       |  
                                        -> TYogaLayout(Aligned None) -> Your Control(Aligned Client)
 ```
+- [ ] Set parent and visible 
