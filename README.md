@@ -12,4 +12,5 @@ Your Control -> TYogaLayout(Aligned Client) -> TYogaLayout(Aligned None) -> Your
                                            |  
                                             -> TYogaLayout(Aligned None) -> Your Control
 ```
+![IDE](https://raw.githubusercontent.com/PonyPC/SkiaUI4Delphi/main/Assets/IDE.png)
 - [ ] Set parent and visible 
