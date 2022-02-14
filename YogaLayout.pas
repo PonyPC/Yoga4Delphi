@@ -76,12 +76,14 @@ type
   protected
     procedure Paint; override;
     procedure Resize; override;
+    procedure VisibleChanged; override;
     procedure DoRealign; override;
     procedure DoAddObject(const AObject: TFmxObject); override;
     procedure DoRemoveObject(const AObject: TFmxObject); override;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
+    procedure CalcLayout;
     procedure ApplyLayout;
   published
     property Align;
@@ -186,6 +188,18 @@ begin
   end;
 end;
 
+procedure TYogaLayout.CalcLayout;
+begin
+  FNode.CalculateLayout(Width, Height);
+  for var I := 0 to Controls.Count - 1 do
+  begin
+    var
+    C := Controls[I];
+    if C is TYogaLayout then
+      TYogaLayout(C).ApplyLayout;
+  end;
+end;
+
 constructor TYogaLayout.Create(AOwner: TComponent);
 begin
   inherited;
@@ -205,12 +219,13 @@ end;
 
 procedure TYogaLayout.DoAddObject(const AObject: TFmxObject);
 begin
+  inherited;
   if AObject is TYogaLayout then
   begin
     TYogaLayout(AObject).Align := TAlignLayout.None;
     FNode.Add(TYogaLayout(AObject).Node);
+    CalcLayout;
   end;
-  inherited;
   Realign;
 end;
 
@@ -218,21 +233,20 @@ procedure TYogaLayout.DoRealign;
 begin
   inherited;
   if FNode.Parent = nil then
-  begin
-    FNode.CalculateLayout(Width, Height);
-    for var I := 0 to Controls.Count - 1 do
-    begin
-      var
-      C := Controls[I];
-      if C is TYogaLayout then
-        TYogaLayout(C).ApplyLayout;
-    end;
-  end;
+    CalcLayout;
 end;
 
 procedure TYogaLayout.DoRemoveObject(const AObject: TFmxObject);
 begin
   inherited;
+  if AObject is TYogaLayout then
+  begin
+    var
+    Index := FNode.IndexOf(TYogaLayout(AObject).Node);
+    if Index >= 0 then
+      FNode.Delete(Index, False);
+    CalcLayout;
+  end;
   Realign;
 end;
 
@@ -547,6 +561,15 @@ end;
 procedure TYogaLayout.SetNodeWidth(const Value: String);
 begin
   FNode.Width := SetYogaValue(Value);
+end;
+
+procedure TYogaLayout.VisibleChanged;
+begin
+  inherited;
+  if Visible then
+    FNode.Display := TYogaDisplay.Flex
+  else
+    FNode.Display := TYogaDisplay.None;
 end;
 
 function GetValueStr(Value: Single): String;
